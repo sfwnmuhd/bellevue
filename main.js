@@ -48,3 +48,68 @@
     isBg1Active = !isBg1Active;
     current = next;
   }, 4000);
+
+
+
+
+// counting animation
+function countUp(element, target) {
+    const speed = 200; // lower is faster
+    const increment = target / speed;
+    let count = 0;
+
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        element.textContent = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = target + "+";
+      }
+    };
+
+    update();
+  }
+
+  function startCountUp() {
+    const counters = document.querySelectorAll(".count");
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      if (!counter.classList.contains("counted")) {
+        countUp(counter, target);
+        counter.classList.add("counted");
+      }
+    });
+  }
+
+  // Trigger on scroll
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  window.addEventListener("scroll", () => {
+    const section = document.querySelector(".stats-card");
+    if (isInViewport(section)) {
+      startCountUp();
+    }
+  });
+
+// fade animation on scroll
+const faders = document.querySelectorAll(".fade-in-up");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  faders.forEach(el => {
+    observer.observe(el);
+  });
+

@@ -10,6 +10,9 @@ body {
   background-color: #f7f3ec;
   color: #333;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Nav Wrapper */
 .nav-wrapper {
@@ -17,6 +20,21 @@ body {
   justify-content: center;
   
   padding: 20px 0;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+}
+.close-btn {
+  display: none;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
 }
 
 /* Navigation Bar */
@@ -543,18 +561,18 @@ margin: 0 auto 40px auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
+}
 
-    .footer-wrapper {
+.footer-wrapper {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 40px;
-    }
+}
 
-    .footer-logo h2 {
+.footer-logo h2 {
       font-size: 32px;
-    }
+}
 
     .footer-logo p span {
       color: #a48b70;
@@ -584,176 +602,36 @@ margin: 0 auto 40px auto;
     .footer-contact ul {
       list-style: none;
       padding: 0;
-    }
+  }
 
-    .footer-menu li,
-    .footer-contact li {
+.footer-menu li,
+.footer-contact li {
       margin-bottom: 10px;
-    }
+}
 
-    .footer-contact a,
-    .footer-menu a {
+.footer-contact a,
+ .footer-menu a {
       color: #333;
       text-decoration: none;
-    }
+}
 
-    .footer-bottom {
+.footer-bottom {
       text-align: center;
       color: #999;
       margin-top: 20px;
-    }
-
-
-
-
-/* === RESPONSIVE STYLES === */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 40px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-    height: auto;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    top: 20%;
-    align-items: center;
-  }
-
-  .right {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .who-we-are-section {
-    flex-direction: column;
-    padding: 30px;
-  }
-
-  .info-card {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .info-text,
-  .info-image {
-    width: 100%;
-  }
-
-  .cta-section {
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .cta-description {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  footer {
-    padding: 40px 20px;
-    height: auto;
-  }
-
-  .footer-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .slider-container .slide-text {
-    font-size: 2.5rem;
-  }
 }
 
-/* Mobile Phones */
-@media (max-width: 768px) {
-  .nav-wrapper {
-    padding: 0;
-  }
-  .navbar {
-    /* padding: 15px 20px; */
-    width: 100%;
-    border-radius: 0 !important;
 
-  }
-  
-
-  .logo {
-    font-size: 1.4rem;
-  }
-
-  .nav-btn {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .hero {
-    padding: 1.5rem;
-  }
-
-
-  .left h1 {
-    font-size: 2rem;
-  }
-
-  .hero-btn {
-    width: 100%;
-  }
-
-  .stats-card {
-    width: 100%;
-  }
-
-  .info-card {
-    width: 100%;
-  }
-  .info-image{
-    display: none;
-  }
-
-  .choose-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .image-wide {
-    height: auto;
-  }
-
-  .slide-text {
-    font-size: 2rem;
-  }
-
-  .cta-text h1 {
-    font-size: 2rem;
-  }
-
-  .footer-logo h2 {
-    font-size: 24px;
-  }
-
-  .newsletter input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .newsletter button {
-    width: 100%;
-  }
+/* Fade-in slide-up effect */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
