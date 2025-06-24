@@ -783,6 +783,7 @@ footer {
     padding: 20px 30px;
     border-radius: 0;
     width: 100%;
+    
   }
   .navbar a{
     display: none;
@@ -805,6 +806,11 @@ footer {
     width: 100%;
     margin-bottom: 0;
     
+
+    
+  }
+  .hero::after{
+    border-radius: 0;
   }
   .hero .bg-layer{
     border-radius: 0;
@@ -961,13 +967,14 @@ footer {
 
 /* Mobile Portrait (up to 575px) */
 @media (max-width: 575px) {
-  .nav-wrapper {
+  /* .nav-wrapper {
     padding: 15px 0;
-  }
+  } */
   
   .navbar {
-    padding: 12px 15px;
-    width: 95%;
+    padding: 15px 20px;
+    width: 100%;
+    margin-bottom: 0;
   }
   
   .logo {
