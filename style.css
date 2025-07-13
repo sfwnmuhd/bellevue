@@ -772,6 +772,14 @@ footer {
   .nav-wrapper{
     padding: 0;
   }
+  
+  
+  .nav-links {
+    display: none;
+  }
+  .nav-links a{
+    display: none;
+  }
    .nav-links.active {
     display: block;
     position: absolute;
@@ -793,15 +801,7 @@ footer {
     display: block;
     font-size: 16px;
     color: #333;
-  }
-}
-  
-  .nav-links {
-    display: none;
-  }
-  .nav-links a{
-    display: none;
-  }
+  } 
   .navbar {
     padding: 20px 30px;
     border-radius: 0;
