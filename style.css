@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 /* Reset & Base */
 * {
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  font-family: "Inter Tight", Sans-serif;
+  font-family: "Urbanist", sans-serif;
   background-color: #f7f3ec;
   color: #333;
 }
@@ -47,6 +48,7 @@ html {
   font-weight: 500;
   color: #070707;
   letter-spacing: 1px;
+  font-family: "Urbanist", sans-serif;
 }
 
 .nav-links ul{
@@ -134,7 +136,7 @@ html {
   font-size: 3rem;
   font-weight: bold; 
   line-height: 1.4;
-  font-family: sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 .left h1 span {
